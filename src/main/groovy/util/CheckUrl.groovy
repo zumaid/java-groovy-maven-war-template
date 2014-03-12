@@ -6,7 +6,13 @@ import org.jsoup.nodes.Document
 class CheckUrl {
 
 	static main(args) {
-		println  c("http://www.baidu.com","x.select('form').size() ==2")
+		
+		def t="http://www.qegoo.cn".toURL().getText("utf-8");
+		Document doc =Jsoup.parse(t);
+		println  doc.select('a').size();
+	 
+	println c("http://www.qegoo.cn","x.select('a').size() ==345")
+		//	println  c("http://www.baidu.com","x.select('form').size() ==2")
 	}
 
 
