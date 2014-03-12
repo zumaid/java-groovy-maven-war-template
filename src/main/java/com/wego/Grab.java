@@ -8,7 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.glamenvseptzen.quickstart.MyGroovyUtil;
+import util.CheckUrl;
+import util.Email;
 
 /**
  * Servlet implementation class Grab
@@ -31,7 +32,17 @@ public class Grab extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 
 		PrintWriter out = response.getWriter();
-		out.println(MyGroovyUtil.readUrl(request.getParameter("url")));
+		
+	
+		if(!CheckUrl.c(request.getParameter("url"),
+				request.getParameter("eval"))){ 
+			Email.sendEmail("error", request.getParameter("url")+request.getParameter("eval"), "zuaa@163.com");
+			out.println(false); 
+		}else{
+			out.println(true); 
+		}
+		
+		
 		out.close();
 	}
 
