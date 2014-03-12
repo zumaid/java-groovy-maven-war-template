@@ -1,12 +1,12 @@
-¼à¿Ø
+ç›‘æ§
 ==============================
-µ÷ÓÃµ±·½·¨
+è°ƒç”¨å½“æ–¹æ³•
 http://ip/productName/Grab?url=http://www.baidu.com&eval=x.select('form').size()%20==1
 
-evalºóÃæÊÇÒ»¸öjsopµÄÓï·¨£¬x¾ÍÊÇurlÖ®ºóµÄ¶ÔÏó¡£Ïàµ±ÓÚ£ºDocument x =Jsoup.parse(html);
+evalåé¢æ˜¯ä¸€ä¸ªjsopçš„è¯­æ³•ï¼Œxå°±æ˜¯urlä¹‹åçš„å¯¹è±¡ã€‚ç›¸å½“äºï¼šDocument x =Jsoup.parse(html);
 
 
-
+ 
 
 
 ===============================
